@@ -1,4 +1,34 @@
-:root {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.box {
+  box-sizing: 20px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.box body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+#app div {
+  border: 1px solid #5a20be;
+  padding: 10px;
+  margin: 10px;
+}
+/* mobile */
+@media (max-width: 600px) {
+  body {
+    background: color #4dbcd7;
+  }
+}
+#app div {
+  font-size: 14px;
+}
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -93,4 +123,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
