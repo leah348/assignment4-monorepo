@@ -33,7 +33,7 @@ async function displayRecipe() {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {
-      await fetch(`${baseURL}/recipes/${recipe.id}`, {
+      await fetch(`${baseURL}/Recipes/${Recipe.id}`, {
         method: "DELETE",
       });
       displayRecipe();
