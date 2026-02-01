@@ -15,6 +15,7 @@ async function fetchData() {
 //4. fetch data before retun above function run it seprate terminal client and server open in browser and console. set code first in server then client. from client send request to my server, server create my database and all get back to me in inspact, console.
 async function displayRecipe() {
   const Recipes = await fetchData();
+  display.innerHTML = "";
   Recipes.forEach((recipe) => {
     //console.log(recipe);
     //6.now set up on pge DOM manipulation. recipes in array so we loop through
