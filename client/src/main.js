@@ -1,7 +1,7 @@
 // 1.fetch  all  recipes
 const display = document.getElementById("app");
 const form = document.getElementById("form");
-const baseURL = "https://assignment4-monorepo.onrender.com/";
+const baseURL = "https://assignment4-monorepo.onrender.com";
 
 //2.this will fetch all my recipe. fetch is defult get request no need to specify
 async function fetchData() {
