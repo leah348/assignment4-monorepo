@@ -1,10 +1,11 @@
 // 1.fetch  all  recipes
 const display = document.getElementById("app");
 const form = document.getElementById("form");
+const baseURL = "https://assignment4-monorepo.onrender.com/";
 
 //2.this will fetch all my recipe. fetch is defult get request no need to specify
 async function fetchData() {
-  const response = await fetch(`http://localhost:8080/Recipes`);
+  const response = await fetch(`${baseURL}/Recipes`);
   const Recipes = await response.json();
   //3. console log
   //console.log(Recipes);
@@ -28,10 +29,11 @@ async function displayRecipe() {
     type.textContent = recipe.type;
     difficulty_level.textContent = recipe.difficulty_level;
 
+    //delete BTN
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {
-      await fetch(`http://localhost:8080/recipes/${recipe.id}`, {
+      await fetch(`${baseURL}/recipes/${recipe.id}`, {
         method: "DELETE",
       });
       displayRecipe();
@@ -42,7 +44,7 @@ async function displayRecipe() {
     editBtn.textContent = "Edit";
 
     editBtn.onclick = () => {
-      fetch(`http://localhost:8080/recipes/${recipe.id}`, {
+      fetch(`${baseURL}/${recipe.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +79,7 @@ async function handleSubmit(event) {
   const userInput = Object.fromEntries(formData); //11.turn into regular object
   const userInputJSON = JSON.stringify(userInput); //12 turn in to json
 
-  const response = await fetch(`http://localhost:8080/Recipes`, {
+  const response = await fetch(`${baseURL}/Recipes`, {
     //13. fetch is always is await data so we ahve gives function to async
     headers: {
       // 14
