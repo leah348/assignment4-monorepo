@@ -11,7 +11,7 @@
 }
 
 .box body {
-  background-color: rgb(244, 193, 126) ;
+  background-color: rgb(212, 152, 72);
   font-family: sans-serif;
   padding: 20px;
 }
@@ -19,12 +19,13 @@
   border: 1px solid #5a20be;
   padding: 10px;
   margin: 10px;
+  background-color: antiquewhite;
 
   display: flex;
   gap: 10px;
 }
 p {
-  color: antiquewhite;
+  color: black;
 }
 /* mobile */
 @media (min-width: 600px) and (max-widg: 900px) {
@@ -36,11 +37,42 @@ p {
   font-size: 14px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
+  font-weight: 700;
 }
-button {
-  background-color: rgb(109, 176, 154);
+.btn-submit {
+  box-sizing: 10px 10;
+  background-color: rgb(191, 105, 48);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-submit :hover {
+  background-color: rgb(229, 100, 13);
+}
+.edit-btn {
+  background-color: rgb(48, 227, 150);
+  color: white;
+  border: none;
+  padding: 6px 10px;
   border-radius: 5px;
-  color: bisque;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.edit-btnt:hover {
+  background-color: #0f766e;
+}
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+deleteBtn:hover {
+  background-color: #b91c1c;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

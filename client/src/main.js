@@ -31,6 +31,9 @@ async function displayRecipe() {
 
     //delete BTN
     const deleteBtn = document.createElement("button");
+    // 👉 ADD CLASS HERE
+    deleteBtn.classList.add("delete-btn");
+
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {
       await fetch(`${baseURL}/Recipes/${Recipe.id}`, {
@@ -41,6 +44,7 @@ async function displayRecipe() {
     // EDIT button
 
     const editBtn = document.createElement("button");
+    editBtn.classList.add("edit-btn");
     editBtn.textContent = "Edit";
 
     editBtn.onclick = () => {
