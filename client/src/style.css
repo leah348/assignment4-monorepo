@@ -5,12 +5,13 @@
 }
 
 .box {
-  box-sizing: 20px;
+  box-sizing: 20vh;
   margin: 5px;
   padding: 10px;
 }
 
 .box body {
+  background-color: rgb(244, 193, 126) ;
   font-family: sans-serif;
   padding: 20px;
 }
@@ -23,17 +24,23 @@
   gap: 10px;
 }
 p {
-  background-color: #5a20be;
   color: antiquewhite;
 }
 /* mobile */
-@media (max-width: 600px) {
+@media (min-width: 600px) and (max-widg: 900px) {
   body {
-    background: color #4dbcd7;
+    background: color #ad448d;
   }
 }
 #app div {
   font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+}
+button {
+  background-color: rgb(109, 176, 154);
+  border-radius: 5px;
+  color: bisque;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
